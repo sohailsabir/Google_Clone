@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                font-size: 14px;
+                color: #555;
+                box-sizing: border-box;
+            }
+            body{
+                font-family: arial,sans-serif;
+            }
+            nav{
+                display: flex;
+                justify-content: flex-end;
+                padding: 20px 10px;
+                height: 60px;
+            }
+            ul{
+                display: flex;
+                list-style: none;
+                align-items: center;
+            }
+            li{
+                padding: 14px 12px;
+                text-align: center;
+            }
+            a{
+                text-decoration: none;
+            }
+            li>a:hover{
+                text-decoration: underline;
+            }
+            .display-search{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 60vh;
+            }
+            .query-field{
+                width: 565px;
+                height: 45px;
+                border: 1px solid #d3d3d3;
+                border-radius: 45px;
+                padding-left: 50px;
+                padding-right: 20px;
+                font-size: 18px;
+            }
+            form{
+                position: relative;
+                margin-top: 26px;
+            }
+            .query-field:hover{
+                box-shadow: 2px 1px 3px 1px rgba(201, 201, 201, 0.5);
+            }
+            .query-field:focus{
+                outline: none;
+            }
+            .search{
+                width: 15px;
+                position: absolute;
+                top: 15px;
+                left: 18px;
+            }
+            div>input{
+                padding: 8px 14px;
+                border: 1px solid transparent;
+                background-color: #f8f9fa;
+            } 
+            div>input:hover{
+                border: 1px solid #eee;
+                box-shadow: 0 0 5px  rgba(0,0,0, 0.2);
+                cursor: pointer;
+            }
+            .search-button{
+                display: flex;
+                justify-content: center;
+                margin-top: 30px;
+                gap: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+           <nav>
+                <ul>
+                    <li><a href="img_search.html">Search Images</a></li>
+                    <li><a href="adv_search.html">Advance Search</a></li>
+                </ul>
+           </nav>
+        </header>
+        <div class="display-search">
+            <img src="image/logo.png" alt="Google Logo">
+            <form action="http://google.com/search" target="_self">
+                <img src="image/search.png" alt="search" class="search">
+                <input class="query-field" type="text" name="query">
+                <div class="search-button">
+                    <input type="submit" value="Google Search">
+                    <input type="submit" name="btnI" value="I'm Feeling Lucky">
+                </div>
+            </form>
+
+        </div>
+    </body>
+</html>
